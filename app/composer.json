@@ -1,0 +1,17 @@
+{
+    "name": "panther-it/brewery",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "PantherIt\\Brewery\\": "src/",
+            "Tests\\PantherIt\\Brewery\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3",
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+       "php": ">=8.0"
+    }
+}

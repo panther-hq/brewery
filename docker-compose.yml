@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  php:
+    container_name: brewery_php
+    hostname: brewery_php
+    build:
+      context: docker/php
+      args:
+        USER_UID: 1000
+        USER_GID: 1000
+        USER_NAME: 'brewery'
+        USER_GROUP: 'brewery'
+    volumes:
+      - ./app:/home/brewery/
+    networks:
+      - brewery
+    working_dir: /home/brewery
+networks:
+  brewery:
